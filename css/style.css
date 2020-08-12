@@ -1,0 +1,104 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: monospace;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: auto;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #141d26;
+}
+
+::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+header {
+    position: relative;
+    background-color: yellow;
+    height: 100vh;
+    text-align: center;
+}
+
+.header-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+header h1 {
+    font-size: 4rem;
+}
+
+header h2 {
+    margin-top: 5px;
+}
+
+header h1, header h2 {
+    width: 100%;
+}
+
+.scroll-down {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    border: 2px solid black;
+    height: 50px;
+    width: 30px;
+    border-radius: 20px;
+}
+
+.scroll-down::before,
+.scroll-down::before {
+    content: "";
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%) rotate(45deg);
+    border: 2px solid black;
+    border-top: none;
+    border-left: none;
+    animation: scrollanim .7s infinite;
+}
+
+@keyframes scrollanim {
+    0% {opacity: 0;}
+    30% {opacity: 1;}
+    60% {opacity: 1;}
+    100% {opacity: 0; top: 60%;}
+}
+
+section {
+    height: 100vh;
+}
+
+#sec-1{
+    padding: 30px;
+}
+
+#sec-1 h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#sec-1 p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: gray;
+}
