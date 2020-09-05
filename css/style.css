@@ -9,7 +9,10 @@
 
 body {
     font-family: monospace;
-    color: white;
+    color: aliceblue;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 ::-webkit-scrollbar {
@@ -29,6 +32,7 @@ header {
     background-color: #613dff;
     height: 100vh;
     text-align: center;
+    transition: background .6s;
 }
 
 .header-container {
@@ -54,7 +58,7 @@ header h2 {
     left: 50%;
     bottom: 20px;
     transform: translateX(-50%);
-    border: 2px solid white;
+    border: 2px solid aliceblue;
     height: 50px;
     width: 30px;
     border-radius: 20px;
@@ -69,7 +73,7 @@ header h2 {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%) rotate(45deg);
-    border: 2px solid white;
+    border: 2px solid aliceblue;
     border-top: none;
     border-left: none;
     animation: scrollanim .7s infinite;
@@ -89,6 +93,9 @@ section {
 #sec-1{
     padding: 30px;
     color: black;
+    background-color: aliceblue;
+    transition: background .6s;
+    transition: color .6s;
 }
 
 #sec-1 h1 {
@@ -97,9 +104,29 @@ section {
     margin-bottom: 10px;
 }
 
-#sec-1 p {
+#sec-1 .text {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: gray;
+    margin-bottom: 20px;
+}
+
+#sec-1 img {
+    max-width: 100%;
+    width: 400px;
+}
+
+#light, #dark {
+    color: #ccc;
+    font-size: 2rem;
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+#light {
+    display: none;
 }
 
 @media screen and (max-width: 600px) {
